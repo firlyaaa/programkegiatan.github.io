@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox dengan Paragraf</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>PROSES KEGIATAN :</h2>
+
+    <form id="checkboxForm">
+        <label for="checkbox1">
+            <input type="checkbox" id="checkbox1"> 1. membuat konsep dan isi game 
+        </label>
+        <br>
+        <label for="checkbox2">
+            <input type="checkbox" id="checkbox2"> 2. membuat Asset - Asset game
+        </label>
+        <br>
+        <label for="checkbox3">
+            <input type="checkbox" id="checkbox3"> 3. Impor marker ke Vuforia Engine
+        </label>
+        <br>
+        <label for="checkbox4">
+            <input type="checkbox" id="checkbox4"> 4. Mengkonfigurasi dan mengimpor target Vuforia ke Unity
+        </label>
+        <br>
+        <label for="checkbox5">
+            <input type="checkbox" id="checkbox5"> 5. Mengimpor asset - asset  ke Unity
+        </label>
+        <br>
+        <label for="checkbox6">
+            <input type="checkbox" id="checkbox6"> 6. Mengatur fungsionalitas asset dan pelacakan object
+        </label>
+        <br>
+        <label for="checkbox7">
+            <input type="checkbox" id="checkbox7"> 7. Menambahkan hyperlink dan mengontrol perilaku object
+        </label>
+        <br>
+        <label for="checkbox8">
+            <input type="checkbox" id="checkbox8"> 8. menguji game AR dengan emulator dan perbaikan bug
+        </label>
+        <br>
+        <label for="checkbox9">
+            <input type="checkbox" id="checkbox9"> 9. membuild game menjadi Apk
+        </label>
+        <br>
+        <label for="checkbox10">
+            <input type="checkbox" id="checkbox10"> 10. Game bangun ruang AR sudah dapat dimaikan, 
+        </label>
+        <!-- Tombol submit -->
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="resultParagraph">Penjelasan: </p>
+
+    <script>
+        // Fungsi yang dipanggil saat formulir disubmit
+        document.getElementById("checkboxForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Menghentikan perilaku bawaan formulir
+            updateParagraph(); // Memanggil fungsi untuk memperbarui paragraf
+        });
+
+        // Fungsi untuk memperbarui paragraf sesuai dengan pilihan checkbox
+        function updateParagraph() {
+            var resultParagraph = document.getElementById("resultParagraph");
+            var checkbox1 = document.getElementById("checkbox1");
+            var checkbox2 = document.getElementById("checkbox2");
+            var checkbox3 = document.getElementById("checkbox3");
+            var checkbox4 = document.getElementById("checkbox4");
+            var checkbox5 = document.getElementById("checkbox5");
+            var checkbox6 = document.getElementById("checkbox6");
+            var checkbox7 = document.getElementById("checkbox7");
+            var checkbox8 = document.getElementById("checkbox8");
+            var checkbox9 = document.getElementById("checkbox9");
+            var checkbox10 = document.getElementById("checkbox10");
+            // Reset nilai paragraf
+            resultParagraph.innerHTML = "Penjelasan: ";
+
+            // Periksa apakah checkbox1 terpilih
+            if (checkbox1.checked) {
+                resultParagraph.innerHTML += "1.Membuat logika aplikasi dan isi skrip dari game yaitu materi bangun ruang meliputi pengertian dan rumus rumus.     ";
+            }
+            
+            // Periksa apakah checkbox2 terpilih
+            if (checkbox2.checked) {
+                resultParagraph.innerHTML += "2.Meliputi desain tampilan, desian marker/ target, 3D object & animasi, mengconvert teks penjelasakn ke sound, dan mencari backsound.     ";
+            }
+
+            if (checkbox3.checked) {
+                resultParagraph.innerHTML += "3.Memasukan gambar marker yang sudah dibuat ke dalam vuforia engine.     ";
+            }
+
+            if (checkbox4.checked) {
+                resultParagraph.innerHTML += "4.Mengkonfigurasi unity untuk membuat AR dengan memasukan/ import target vuforia engine ke unity.     ";
+            }
+
+            if (checkbox5.checked) {
+                resultParagraph.innerHTML += "5.Memasukan semua asset yang sudah dibuat ke dalam tempat asset unity.     ";
+            }
+
+            if (checkbox6.checked) {
+                resultParagraph.innerHTML += "6.Mengatur tata letak serta fungsionalitas asset seperti menyambungkan antara 1 asset dengan asset lainnya.     ";
+            }
+
+            if (checkbox7.checked) {
+                resultParagraph.innerHTML += "7.menambahkan penulisan kode dengan c# untuk membuat hyperlink halaman game dan untuk mengontrol perilaku yang harus dilakukan object.     ";
+            }
+
+            if (checkbox8.checked) {
+                resultParagraph.innerHTML += "8.melakukan pengujian game dengan menggunakan emulator pada unity dan memperbaiki bug/ masalah yang terdapat pada game.     ";
+            }
+
+            if (checkbox9.checked) {
+                resultParagraph.innerHTML += "9.membuild file game menjadi aplikasi agar dapat dimainkan secara nyata atau dengan menggunakan handphone.     ";
+            }
+
+            if (checkbox10.checked) {
+                resultParagraph.innerHTML += "10.Setelah dibuild game sudah dapat diinstall di handphone untuk cara memaikannya sudah ada di dalam game menu cara bermain.    ";
+            }
+        }
+    </script>
+
+</body>
+</html>
